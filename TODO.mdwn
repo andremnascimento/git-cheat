@@ -1,0 +1,7 @@
+TODO
+====
+
+* Trivial: rotina de testes do blogatico, com dados sample e um `pre-commit` hook.
+* Básico: geração de saídas noutros formatos.
+* Intermediário: template usando o [Skeleton](http://getskeleton.com) ou similar.
+* Avançado: link para o arquivo fonte nas páginas HTML.

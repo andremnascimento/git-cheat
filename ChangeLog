@@ -1,0 +1,17 @@
+2018-09-20 - 0.4 - 
+	* Altera projeto para utilização em página wiki
+	* Altera dependencias para instalação em usuário local
+
+2015-11-22 - 0.3 - Silvio Rhatto
+
+	* Documentação: roteiro de desenvolvimento.
+
+2015-11-22 - 0.2 - Silvio Rhatto
+
+	* Deploy: configuração git no ambiente de hospedagem.
+	* Documentação: instalando e fazendo o deploy.
+	* Adiciona configuração do vagrant.
+
+2015-11-22 - 0.1 - Silvio Rhatto
+
+	* Versão inicial do blogático.

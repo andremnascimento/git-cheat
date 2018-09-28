@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#
+# pandocsh: gerador de conteúdo estático!
+#
+# Copyright (C) 2015 Silvio Rhatto - rhatto at riseup.net
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published
+# by the Free Software Foundation, either version 3 of the License,
+# or any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+echo "Baixando pandoc..."
+wget https://github.com/jgm/pandoc/releases/download/2.3/pandoc-2.3-linux.tar.gz
+
+
+echo "Instalando pandoc em /home/usuario/.local..."
+tar xvzf pandoc-2.3-linux.tar.gz --strip-components 1 -C $HOME/.local
+
+#you may install from the tarball into $DEST (say, /usr/local/ or $HOME/.local) by doing
+#tar xvzf $TGZ --strip-components 1 -C $DEST
+#where $TGZ is the path to the downloaded zipped tarball. 
+
