@@ -1,7 +1,7 @@
-Blogático: compilador de sítio estático
+ compilador de markdown para HTML estático
 =======================================
 
-Blogático é um gerador de websites estáticos com as seguintes características:
+Este proejto é um gerador de websites estáticos com as seguintes características:
 
 * Simplicidade e facilidade de uso.
 * Baseado em arquivos de texto com formatação básica.
@@ -12,7 +12,7 @@ Blogático é um gerador de websites estáticos com as seguintes característica
 Dependências
 ------------
 
-Utilize o script `blogatico-dependencies` para fazer a instalação das dependências num
+Utilize o script `pandocToHTML-dependencies` para fazer a instalação das dependências num
 ambiente de hospedagem compatível com o Debian GNU/Linux.
 
 Criando um site
@@ -30,7 +30,7 @@ Vamos ilustrar com simples comandos:
     echo "Oi mundo!" > data/index.mdwn
 
     # Compile!
-    blogatico
+    sh pandocToHTML
 
 O sítio compilado será criado na pasta `output`, pronta para ser
 copiada para um ambiente web.
@@ -53,5 +53,5 @@ Mantendo o blog pelo git
 Documentação adicional e exemplo
 --------------------------------
 
-Um sítio de exemplo contendo a documentação básica do blogático se encontra
-na pasta `data` e pode ser gerada pelo próprio blogático!
+Um arquivo de exemplo contendo a documentação básica se encontra
+na pasta `data` e pode ser gerada pelo próprio projeto!

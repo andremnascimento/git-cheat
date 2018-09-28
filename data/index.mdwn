@@ -1,21 +1,22 @@
-Blogático: gerador de websites estáticos
+Git-Cheat: gerador de websites estáticos
 ========================================
 
-Oi mundo! Este é um site de exemplo e documentação do blogático.
+Oi mundo! Este é um site de exemplo e documentação.
 
 Implementação
 -------------
 
-O blogático é um script escrito em bash que utiliza o [Pandoc](http://pandoc.org)
+O projeto é um script escrito em bash que utiliza o [Pandoc](http://pandoc.org)
 para compilar um website completo a partir de arquivos de texto usando a formatação
 Markdown.
 
 Desenvolvimento
 ---------------
 
-O blogático já vem com um ambiente de desenvolvimento. Para usá-lo, instale o Vagrant e digite:
+Para gerar o conteudo em Markdown você pode utilizar os seguinte editores online:
 
-    vagrant up
+    * [StackEdit](https://stackedit.io/app)
+    * [Editor.md](https://pandao.github.io/editor.md/en.html)
 
 Fazendo um release
 ------------------
@@ -31,23 +32,3 @@ Fazendo um release
 
     # etc!
 
-Fazendo o deploy
-----------------
-
-Utilize o seguinte `post-update` hook para gerar o sítio estático no ambiente de hospedagem:
-
-    #!/bin/sh
-
-    unset GIT_DIR
-    cd ..
-    git reset HEAD --hard
-    git checkout -f
-    ./blogatico
-
-    cd -
-    exec git update-server-info
-
-Para que isso funcione, você também terá de configurar o repositório do seu sítio estático
-para que aceite receber as mudanças via `git push`:
-
-    git config receive.denyCurrentBranch ignore
