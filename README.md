@@ -11,6 +11,9 @@ Este proejto é um gerador de websites estáticos com as seguintes característi
 * Fácil de hospedar em qualquer local.
 * O conteúdo pode ser convertido noutros formatos.
 
+Apostila:
+https://docs.google.com/document/d/1vA8ZdYBTj3ptqwK0JAxS2ydfmwVqSu9Lsh0Q_nbQCUo/edit?usp=sharing
+
 Dependências
 ------------
 
