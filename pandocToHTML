@@ -2,8 +2,6 @@
 #
 # git-cheat: gerador de html
 #
-# Copyright (C) 2015 Silvio Rhatto
-#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -21,6 +19,8 @@
 BASEDIR="$(pwd)"
 DATA="$BASEDIR/data"
 OUTPUT="$BASEDIR/output"
+TEMP="$BASEDIR/tmp"
+PANDOC_HOME="$(pwd)/pandoc-2.3"
 PANDOC_OPTS="${PANDOC_OPTS:=--template=default.html5}"
 
 echo '       _ _          _                _   '
@@ -38,18 +38,20 @@ echo "Limpando a versão anterior..."
 rm -rf $OUTPUT || exit 1
 
 echo "Garantindo a existência das pastas necessárias..."
-mkdir -p $OUTPUT || exit 1
+mkdir -p $TEMP || exit 1
 
 echo "Copiando a estrutura de pastas..."
-rsync -qav $DATA/ $OUTPUT/ || exit 1
+find $DATA/ -type d -print0 |  xargs -0 -L1 -i mkdir -p "tmp/{}" || exit 1
+#find $DATA -type d -print0 | echo {} \;
+#rsync -qav $DATA/ $OUTPUT/ || exit 1
 
 echo "Convertendo todos arquivos Markdown para HTML..."
-find $OUTPUT -name '*md' -exec pandoc $PANDOC_OPTS -o {}.html {} \; || exit 1
+find $DATA -name '*md' -exec $PANDOC_HOME/pandoc $PANDOC_OPTS -o $TEMP/{}.html {} \; || exit 1
 
-echo "Limpando arquivos markdown..."
-find $OUTPUT -name '*mdwn' -exec rm {} \; || exit 1
+echo "Limpando arquivos temporarios..."
+mv $TEMP/$DATA $OUTPUT && rm -rf $TEMP || exit 1
 
 echo "Corrigindo o nome dos arquivos gerados..."
-find $OUTPUT -name '*.html' -exec rename 's/\.mdwn.html$/.html/' {} \; || exit 1
-
+#find $OUTPUT -name '*.html' -exec rename 's/\.md.html$/.html/' {} \; || exit 1
+#echo {} \;
 echo "Feito! Tenha um bom dia :)"

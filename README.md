@@ -3,7 +3,7 @@
  compilador de markdown para HTML estático
 =======================================
 
-Este proejto é um gerador de websites estáticos com as seguintes características:
+Este projeto é um gerador de websites estáticos com as seguintes características:
 
 * Simplicidade e facilidade de uso.
 * Baseado em arquivos de texto com formatação básica.
@@ -13,6 +13,9 @@ Este proejto é um gerador de websites estáticos com as seguintes característi
 
 Apostila:
 https://docs.google.com/document/d/1vA8ZdYBTj3ptqwK0JAxS2ydfmwVqSu9Lsh0Q_nbQCUo/edit?usp=sharing
+
+Slides:
+https://drive.google.com/open?id=1Zjfonb6N7jQIeO-WUXOLdUUMpn0RRu3L3790XHFqoHY
 
 Dependências
 ------------
@@ -32,7 +35,7 @@ Vamos ilustrar com simples comandos:
     cd ~/projetos/blog
 
     # Crie uma página inicial
-    echo "Oi mundo!" > data/index.mdwn
+    echo "Oi mundo!" > data/index.md
 
     # Compile!
     sh pandocToHTML
