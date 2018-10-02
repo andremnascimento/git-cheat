@@ -23,6 +23,9 @@ Dependências
 Utilize o script `pandocToHTML-dependencies` para fazer a instalação das dependências num
 ambiente de hospedagem compatível com o Debian GNU/Linux.
 
+No windows baixe o arquivo compactado (zip) do pandoc em: https://github.com/jgm/pandoc/releases/tag/2.3.1
+e descompacte na pasta pandoc-2.3
+
 Criando um site
 ---------------
 
