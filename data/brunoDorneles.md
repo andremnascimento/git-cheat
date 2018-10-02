@@ -1,0 +1,3 @@
+## Manjaro
+
+O **Manjaro Brasil** é uma comunidade **GNU/Linux** formada por usuários brasileiros do Manjaro Linux, que tem como principal objetivo divulgar e tornar esta distribuição mais acessível aos brasileiros. Lembramos a todos que o sucesso do Manjaro Brasil depende única e exclusivamente de seus usuários. Quanto mais participarem e colaborarem com as discussões nos fóruns, mais o Manjaro Brasil crescerá e, consequentemente, ajudaremos a difundir esta distribuição GNU/Linux.
